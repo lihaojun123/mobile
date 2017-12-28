@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
         {{msg}}
+        <mt-button type="default">default</mt-button>
+        <mt-button type="danger">danger</mt-button>
   </div>
 </template>
 

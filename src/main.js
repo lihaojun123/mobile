@@ -3,6 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+//组件的使用
+import MintUI from 'mint-ui';
+import 'mint-ui/lib/style.css';
+
+import './assets/css/base.css';
+
+Vue.use(MintUI);
 
 Vue.config.productionTip = false
 
