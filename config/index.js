@@ -11,7 +11,16 @@ module.exports = {
     assetsPublicPath: '/',
     // 代理配置表，在这里可以配置特定的请求代理到对应的API接口
     // 例如将'localhost:8080/api/xxx'代理到'www.example.com/api/xxx'
-    proxyTable: {},
+    proxyTable: {
+      '/api':{
+          target:'http://localhost:3000',    //代理的目标路径
+          pathRewrite:{            //重写路径
+              '^/api':'/'                 
+          },
+          changeOrigin:true,         //是否跨域
+         // secure:false                //https 证书问题
+      } 
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

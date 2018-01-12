@@ -1,59 +1,59 @@
 <template>
-    <div id="productDetail">
-        <mt-header fixed title="详情" class="ui-head">
-            <router-link to="/" slot="left">
-                <mt-button icon="back">返回</mt-button>
-            </router-link>
-        </mt-header>
-        <div class="container">
-            <mt-swipe :auto="40000">
-                <mt-swipe-item>
-                    <img class="swiper-img" src="http://img.qfc.cn/upload/c11/product/d5/13/20180105117.jpg">
-                    <span class="icon-title">推荐</span>
-                    <span class="icon-hot">热卖</span>
-                </mt-swipe-item>
-                <mt-swipe-item>
-                    <img class="swiper-img" src="http://img.qfc.cn/upload/c11/product/d5/13/20180105117.jpg">
-                    <span class="icon-title">推荐</span>
-                </mt-swipe-item>
-                <mt-swipe-item>
-                    <img class="swiper-img" src="http://img.qfc.cn/upload/c11/product/d5/13/20180105117.jpg">
-                    <span class="icon-title">推荐</span>
-                </mt-swipe-item>
-            </mt-swipe>
-            <div class="product-detail-wrap">
-                <div class="detail-des">
-                    <p>sfsdfsdfffsdfsd</p>
-                </div>
-                <div class="product-detail">
-                    <p>咚咚咚，回复过后的是吧，发的和爱人还给他，阿虎发货单。</p>
-                    <img src="http://img.qfc.cn/upload/c11/product/4f/ca/20180105118.jpg" />
-                    <p>咚咚咚，回复过后的是吧，发的和爱人还给他，阿虎发货单。</p>
-                    <img src="http://img.qfc.cn/upload/c11/product/4f/ca/20180105118.jpg" />
-                    <p>咚咚咚，回复过后的是吧，发的和爱人还给他，阿虎发货单。</p>
-                    <img src="http://img.qfc.cn/upload/c11/product/4f/ca/20180105118.jpg" />
-                    <p>咚咚咚，回复过后的是吧，发的和爱人还给他，阿虎发货单。</p>
-                    <img src="http://img.qfc.cn/upload/c11/product/4f/ca/20180105118.jpg" />
-                </div>
-            </div>
-            <div class="nav-bottom">
-                <ul>
-                    <li>
-                        <span @click="collection">收藏</span>
-                    </li>
-                    <li>
-                        <span @click="telphone">打电话</span>
-                    </li>
-                    <li>
-                        <span @click="shopCart">加入购物车</span>
-                    </li>
-                    <li>
-                        <span @click="buy">购买</span>
-                    </li>
-                </ul>
-            </div>
+  <div id="productDetail">
+    <mt-header fixed title="详情" class="ui-head">
+      <router-link to="/" slot="left">
+        <mt-button icon="back">返回</mt-button>
+      </router-link>
+    </mt-header>
+    <div class="container">
+      <mt-swipe :auto="40000">
+        <mt-swipe-item>
+          <img class="swiper-img" src="http://img.qfc.cn/upload/c11/product/d5/13/20180105117.jpg">
+          <span class="icon-title">推荐</span>
+          <span class="icon-hot">热卖</span>
+        </mt-swipe-item>
+        <mt-swipe-item>
+          <img class="swiper-img" src="http://img.qfc.cn/upload/c11/product/d5/13/20180105117.jpg">
+          <span class="icon-title">推荐</span>
+        </mt-swipe-item>
+        <mt-swipe-item>
+          <img class="swiper-img" src="http://img.qfc.cn/upload/c11/product/d5/13/20180105117.jpg">
+          <span class="icon-title">推荐</span>
+        </mt-swipe-item>
+      </mt-swipe>
+      <div class="product-detail-wrap">
+        <div class="detail-des">
+          <p>sfsdfsdfffsdfsd</p>
         </div>
+        <div class="product-detail">
+          <p>咚咚咚，回复过后的是吧，发的和爱人还给他，阿虎发货单。</p>
+          <img src="http://img.qfc.cn/upload/c11/product/4f/ca/20180105118.jpg" />
+          <p>咚咚咚，回复过后的是吧，发的和爱人还给他，阿虎发货单。</p>
+          <img src="http://img.qfc.cn/upload/c11/product/4f/ca/20180105118.jpg" />
+          <p>咚咚咚，回复过后的是吧，发的和爱人还给他，阿虎发货单。</p>
+          <img src="http://img.qfc.cn/upload/c11/product/4f/ca/20180105118.jpg" />
+          <p>咚咚咚，回复过后的是吧，发的和爱人还给他，阿虎发货单。</p>
+          <img src="http://img.qfc.cn/upload/c11/product/4f/ca/20180105118.jpg" />
+        </div>
+      </div>
+      <div class="nav-bottom">
+        <ul>
+          <li>
+            <span @click="collection">收藏</span>
+          </li>
+          <li>
+            <span @click="telphone">打电话</span>
+          </li>
+          <li>
+            <span @click="shopCart">加入购物车</span>
+          </li>
+          <li>
+            <span @click="buy">购买</span>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 </template>
 <script>
 import { Swipe, SwipeItem, Indicator } from "mint-ui";
@@ -73,13 +73,12 @@ export default {
           spinnerType: "fading-circle"
         });
         //收藏业务逻辑
-        
       } else {
         //跳转登录
         _this.$router.push({
-          path:'/login',
+          path: "/login",
           query: {
-            redirect:'/detail?id='+ _this.$route.query.id
+            redirect: "/detail?id=" + _this.$route.query.id
           }
         });
       }

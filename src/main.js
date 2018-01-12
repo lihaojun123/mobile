@@ -11,8 +11,7 @@ import service from '@/service/index.js'
 Vue.prototype.$service=service
 Vue.use(MintUI)
 
-//模拟数据，正式环境删除以下
-import '../mock/index'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

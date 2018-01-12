@@ -1,8 +1,25 @@
-import service from './service'
+import service from '../service'
 
-class Detail {
+class Home {
     /**
-     **获取详情
+     **获取首页列表
+     **/
+    getIndex() {
+        return service.axios.post(service.api.home.list)
+    }
+    /**
+     **删除产品
+     **@param 产品id
+     **/
+    delProduct(productId) {
+        return service.axios.get(service.api.home.delete, {
+            params: {
+                productId: productId
+            }
+        })
+    }
+    /**
+     **获取产品详情
      **@param 产品id
      **/
     getDetail(productId) {
@@ -25,4 +42,4 @@ class Detail {
     }
 }
 
-export default new Detail();
+export default new Home();

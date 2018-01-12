@@ -70,6 +70,7 @@ router.beforeEach((to, from, next) => {
     NProgress.start();
     next();
    }
+   
    //全局需要登录的页面  
   // if (to.path == '/login') {
   //   sessionStorage.removeItem('ssosign');

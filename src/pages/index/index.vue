@@ -102,15 +102,7 @@ export default {
       .then(response => {
         //执行成功返回的数据
         Indicator.close();
-        console.log(response);
-        if (response.data.success) {
-          _this.list = response.data.data;
-        } else {
-          Toast({
-            message: response.data.message || "执行失败",
-            iconClass: "icon icon-error"
-          });
-        }
+        _this.list = response.data;
       })
       .catch(error => {
         //执行失败返回的数据

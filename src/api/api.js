@@ -1,25 +1,32 @@
-let profix='';
-if(process.env.NODE_ENV=='production'){
-    profix='/' 
-}
- const api={
-    //首页接口
-    home:{
-        list:profix + 'home/list.json',
-        delete:profix + 'home/delete.json'
-    },
-    //资讯页接口
-    info:{
-        list:profix + 'info/list.json'
-    },
-    //登录
-    login:{
-        loginIn:profix + 'login/doList.json'
-    },
-    productDetail:{
-        detail:profix + 'productDetail/detail.json',
-        collection:profix + 'productDetail/collection.json'
-    }
-};
 
-export default api;
+module.exports = function () {
+    let profix = '', suffix = '';
+    if (process.env.NODE_ENV == 'production') {
+        profix = '/';
+        suffix = ".json";
+    }
+    const api = {
+        //首页接口
+        home: {
+            list: profix + 'api/home/list' + suffix,
+            delete: profix + 'api/home/delete' + suffix,
+        },
+        //资讯页接口
+        info: {
+            list: profix + 'api/info/list' + suffix
+        },
+        //登录
+        login: {
+            loginIn: profix + 'api/login/loginIn' + suffix
+        },
+        productDetail: {
+            detail: profix + 'api/productDetail/detail' + suffix,
+            collection: profix + 'api/productDetail/collection' + suffix
+        }
+    };
+    return api
+}();
+
+
+
+

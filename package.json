@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "mock":"json-server --watch mock/faker-data.js -m mock/post-to-get.js -r mock/server-routes.json",
+    "mockdev":"npm run dev | npm run mock"
   },
   "dependencies": {
     "axios": "^0.17.1",
