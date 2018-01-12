@@ -6,16 +6,17 @@ const path = require('path')
 
 module.exports = {
   dev: {
-
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+    // 代理配置表，在这里可以配置特定的请求代理到对应的API接口
+    // 例如将'localhost:8080/api/xxx'代理到'www.example.com/api/xxx'
     proxyTable: {},
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8085, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
-    autoOpenBrowser: false,
+    autoOpenBrowser: true,
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
@@ -50,12 +51,16 @@ module.exports = {
 
   build: {
     // Template for index.html
+    // html入口文件
     index: path.resolve(__dirname, '../dist/index.html'),
 
     // Paths
+     // 产品文件的存放路径
     assetsRoot: path.resolve(__dirname, '../dist'),
+    // 静态资源文件夹
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    // 发布路径
+    assetsPublicPath: '/dist/',
 
     /**
      * Source Maps
