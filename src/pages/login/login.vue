@@ -25,18 +25,25 @@ export default {
       let _this = this;
       let username = _this.username,
         password = _this.password;
-
+        if(!username){
+          Toast('用户名为空');
+          return false;
+        }
+        if(!password){
+          Toast('密码为空');
+          return false;
+        }
+        
       _this.$service.login
         .login()
         .then(response => {
           //执行成功返回的数据
           Indicator.close();
-           if(response.data.success){
-                let ssosign=response.data.data.ssoSign;
-                sessionStorage.setItem("ssosign", ssosign);
-                _this.$router.push(_this.$route.query.redirect);
-           }else{  
-           }  
+          let ssosign=response.data.data.ssoSign;
+          if(ssosign){
+             sessionStorage.setItem("ssosign", ssosign);
+             _this.$router.push(_this.$route.query.redirect);
+          }
         })
         .catch(error => {
           //执行失败返回的数据
