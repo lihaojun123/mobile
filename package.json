@@ -8,13 +8,14 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js",
-    "mock":"json-server --watch mock/faker-data.js -m mock/post-to-get.js -r mock/server-routes.json",
-    "mockdev":"npm run dev | npm run mock"
+    "mock": "json-server --watch mock/faker-data.js -m mock/post-to-get.js -r mock/server-routes.json",
+    "mockdev": "npm run dev | npm run mock"
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "faker": "^4.1.0",
+    "json-server": "^0.12.1",
     "mint-ui": "^2.2.12",
-    "mockjs": "^1.0.1-beta3",
     "nprogress": "^0.2.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",

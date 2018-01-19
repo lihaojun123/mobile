@@ -85,6 +85,10 @@ router.beforeEach((to, from, next) => {
 });
 
 router.afterEach((to, from) => {
+  if (window.ga) {
+     window.ga('set', 'page', to.fullPath);
+     window.ga('send', 'pageview');
+  }
   NProgress.done();
 })
 
