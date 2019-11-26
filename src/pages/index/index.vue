@@ -1,6 +1,6 @@
 <template>
     <div id="index">
-        <mt-header fixed title="首页" class="ui-head">
+        <mt-header fixed title="首页2222222222222222222" class="ui-head">
             <mt-button icon="more" slot="right"></mt-button>
         </mt-header>
         <div class="container clearfix">
