@@ -61,15 +61,15 @@ module.exports = {
   build: {
     // Template for index.html
     // html入口文件
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../mobile/index.html'),
 
     // Paths
      // 产品文件的存放路径
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, '../mobile'),
     // 静态资源文件夹
     assetsSubDirectory: 'static',
     // 发布路径
-    assetsPublicPath: '/dist/',
+    assetsPublicPath: '/mobile/',
 
     /**
      * Source Maps
