@@ -69,7 +69,7 @@ module.exports = {
     // 静态资源文件夹
     assetsSubDirectory: 'static',
     // 发布路径
-    assetsPublicPath: '/mobile/',
+    assetsPublicPath: '/',
 
     /**
      * Source Maps
